@@ -19,18 +19,6 @@ You control a triangle-shaped ship at the bottom of the screen. Green blocks spa
 | `Space` | Shoot a bullet |
 | Window close button | Quit the game |
 
-## Requirements
-
-- Python 3
-- [Pygame](https://www.pygame.org/)
-
-## Installation & Running
-
-```bash
-pip install pygame
-python game.py
-```
-
 ## How It Works
 
 The game runs on a single loop (`while running`) capped at 60 FPS via `pygame.time.Clock()`. Each frame:
@@ -44,15 +32,3 @@ The game runs on a single loop (`while running`) capped at 60 FPS via `pygame.ti
 
 All game entities (bullets, enemies, explosions) are tracked as plain Python lists of `[x, y, ...]` coordinates, rebuilt each frame to drop anything off-screen or resolved.
 
-## Project Structure
-
-```
-game.py    # Entire game: setup, main loop, rendering, and game logic
-```
-
-## Possible Improvements
-
-- Add a game-over/restart state instead of running forever
-- Increase enemy speed or spawn rate as score climbs, for difficulty scaling
-- Add sound effects for shooting and explosions
-- Track and display a high score across sessions
